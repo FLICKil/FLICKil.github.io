@@ -1,0 +1,100 @@
+a{
+    color:#333;
+    font-size: 1.5em;
+}
+a:hover{
+    text-decoration: none;
+}
+
+img{
+    max-width: 500px;
+}
+
+body{
+    font-size:14px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    background: #F7F7F7;
+    line-height: 1.5;
+    text-align: left;
+    max-width: 1000px;
+    margin: 8px 8px 8px 160px;
+}
+
+h1 {
+    background: rgba(41,116,177,0.13);
+    border: 1px solid #a2cbeb;
+    font-size: 22px;
+    padding: 5px 10px;
+    border-left: 4px solid #307fbe;
+    margin: 0 0 20px 0;
+}
+
+table strong{
+    color: #007bff;
+}
+
+table{
+    border-collapse: collapse;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+h2{
+    margin: 15px 0 5px 0;
+    padding-bottom: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700!important;
+    padding: 0;
+    line-height: 1.2;
+    color: inherit;
+}
+
+h3{
+    font-size: 1.75rem;
+}
+
+.price {
+    border: 2px solid #b77118;
+    background: rgba(245, 149, 10, 0.22);
+    padding: 10px;
+    float: right;
+}
+
+.price .new-price{
+    font-size: 30px;
+    font-weight: bold;
+    background-clip: initial;
+    background: -webkit-linear-gradient(45deg, #E02020, #FFCA00 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.status{
+    text-transform: uppercase;
+    color: #0BBE0F;
+    font-weight: bold;
+    font-size: 12px;
+    float: left;
+}
+
+.warr {
+    text-transform: uppercase;
+    float: right;
+    color: #F41B15;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.status label,.warr label {
+    color: #333;
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
