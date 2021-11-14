@@ -7,26 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/1e69a2363a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <div class="noti">
+        <div class="notibox">
+            <p><i class="fas fa-check-circle"></i> Login Successful</p>
+        </div>
+    </div>
+
     <div class="container">
         <div class="box">
             <div class="title">LOGIN</div>
 
             <div class="input">
                 <label for="name">Username</label>
-                <input type="text" name="name" id="name"  onfocus="focusFunction(this.id)" onblur="blurFunction(this.id)">
+                <input type="text" name="name" id="name" onfocus="focusFunction(this.id)"
+                    onblur="blurFunction(this.id)">
             </div>
 
             <div class="input">
                 <label for="pass">Password</label>
-                <input type="password" name="pass" id="pass" onfocus="focusFunction(this.id)" onblur="blurFunction(this.id)">
+                <input type="password" name="pass" id="pass" onfocus="focusFunction(this.id)"
+                    onblur="blurFunction(this.id)">
+                    <div class="showPwd"><i class="far fa-eye-slash" onclick="showHidePassword()"></i></div>
             </div>
 
-
             <div class="button login">
-                <a href="register.html"><button>Log In</button></a>
+                <button onclick="loginFunction()">Log In</button>
+            </div>
+
+            <div class="button register">
+                <a href="register.html"><button>Register</button></a>
             </div>
 
             <a href="" class="pass-forgot">Forgot your password?</a>
