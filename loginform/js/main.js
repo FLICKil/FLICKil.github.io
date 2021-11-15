@@ -4,8 +4,23 @@ const regUser = document.querySelector('#regname')
 const regPass = document.querySelector('#regpass')
 const regRePass = document.querySelector('#reregpass')
 const noti = document.querySelector('.noti');
+const form = document.querySelector('.container')
 let notiContent = "";
 let err = [];
+
+document.addEventListener("keyup",function(event){
+    if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    if (document.URL.includes("register")){
+        document.getElementById("register").click();
+    }
+    else {
+        document.getElementById("login").click();
+    }
+  }
+})
 
 function focusFunction(x) {
     let element = document.querySelector(`label[for=${x}]`);
@@ -37,9 +52,10 @@ function registerFunction() {
             blurFunction('reregpass');
         }
         noti.style.opacity = "100";
-        setTimeout(function () {
-            noti.style.opacity = "0";
-        }, 1500);
+        form.style.display = "none"
+        // setTimeout(function () {
+        //     noti.style.opacity = "0";
+        // }, 1500);
     }
     else {
         for (let item of err) {
@@ -65,6 +81,7 @@ function registerFunction() {
 function loginFunction() {
     if (validateLogin()) {
         noti.querySelector('.notibox').innerHTML = `<p style = "color:green"><i class="fas fa-check-circle"></i>&nbsp;Login Successful</p>`;
+        form.style.display = "none"
     } else {
         noti.querySelector('.notibox').innerHTML = notiContent;
     }
@@ -77,7 +94,7 @@ function loginFunction() {
         }
     }
     noti.style.opacity = "100";
-    setTimeout(function () { noti.style.opacity = "0"; }, 1500)
+    // setTimeout(function () { noti.style.opacity = "0"; }, 1500)
 }
 
 function validateLogin() {
