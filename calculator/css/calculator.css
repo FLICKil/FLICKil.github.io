@@ -1,0 +1,67 @@
+body{
+    box-sizing: border-box;
+    outline: none;
+}
+
+.container{
+    width: 600px;
+    height: 800px;
+    display: flex;
+    flex-flow: column wrap;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 4px;
+    background-color: black;
+    margin: 50px auto;
+}
+
+.screen{
+    display: flex;
+    flex-flow: column wrap;
+    margin-right: 1px;
+    height: 30%;
+}
+
+.screen #input,.screen #equation{
+    text-align: right;
+    font-size: 200%;
+}
+
+.screen #equation{
+    height: 30%;
+    color: rgb(85, 85, 85);
+    background-color: black;
+    border-color: black;
+}
+
+.screen #input{
+    height: 60%;
+    font-size: 3em;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: repeat(6,calc(100%/6));
+    height: 70%;
+}
+
+.buttons button{
+    background-color: rgb(80, 80, 80);
+    color: white;
+    font-size: 200%;
+    border-radius: 10px;
+    /* border:2px solid black; */
+}
+
+.buttons .operator{
+    background-color: rgb(39, 39, 39);
+}
+
+.buttons .delete, .buttons .all-clear{
+    background-color: chocolate;
+}
+
+.buttons .result{
+    color:black;
+    background-color: rgb(69, 196, 200);
+}
