@@ -1,0 +1,57 @@
+body{
+    background-color: #dddddd;
+}
+.navbar{
+    background-color: rgba(0,0,0,0.3);
+}
+
+.navbar a{
+    color:azure !important;
+}
+
+.nav-link.active{
+    color: rgb(240, 142, 218) !important;
+}
+
+.navbar ul > li {
+  padding: 10px 0 10px 24px;
+}
+
+.navbar-brand {
+  padding-left: 3rem;
+}
+
+.banner-container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.carousel-item {
+  width: 100%;
+  overflow: hidden;
+  max-height: 400px;
+}
+
+.carousel-item img {
+  object-fit: cover;
+}
+
+.container {
+  margin-top: 1.5rem;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.col {
+  margin-top: 1.5rem;
+}
+
+.card-title, .card-text{
+    text-align: center;
+}
+
+.card-text{
+    color: red;
+}
