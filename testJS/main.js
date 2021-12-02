@@ -1,5 +1,5 @@
 let toast = $(".toast");
-let toastDom = document.querySelectorAll(".toast");
+// let toastDom = document.querySelectorAll(".toast");
 
 $(document).ready(function () {
 
@@ -22,12 +22,6 @@ $(document).ready(function () {
     //         this.parentElement.classList.remove("active");
     //     }) 
     // });
-
-    toastDom.forEach(toast => {
-        toast.querySelector(".btn-close").addEventListener('click', function () {
-            toast.classList.remove("active");
-        })
-    })
 
     $("#liveToastBtn").click(function () {
         setTimeout(function(){
@@ -56,4 +50,12 @@ $(document).ready(function () {
 
         }
     });
+
+    setInterval(() => {
+        document.querySelectorAll(".toast").forEach(toast => {
+            toast.querySelector(".btn-close").addEventListener('click', function () {
+                toast.classList.remove("active");
+            })
+        })    
+    }, 1);
 })
