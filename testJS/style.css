@@ -1,0 +1,18 @@
+.toast-header img{
+    width: 100%;
+    max-width: 1rem;
+}
+
+.container{
+    margin-top: 50px;
+}
+
+.toast-container{
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+.toast.active{
+    display:block;
+}
