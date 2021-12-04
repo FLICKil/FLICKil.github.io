@@ -1,4 +1,5 @@
-let toast = $(".toast");
+let toast = $(".toast.non-stack");
+let toastStack = $(".toast.stack");
 // let toastDom = document.querySelectorAll(".toast");
 
 $(document).ready(function () {
@@ -12,7 +13,7 @@ $(document).ready(function () {
             if (toast.hasClass("active")) {
                 setTimeout(function () {
                     toast.removeClass("active");
-                }, 5000)
+                }, 10000)
             }
         }
     });
@@ -22,40 +23,46 @@ $(document).ready(function () {
     //         this.parentElement.classList.remove("active");
     //     }) 
     // });
+     $(".btn-close").click(function(){
+        $(this).parents(".toast").removeClass("active");
+    })
 
     $("#liveToastBtn").click(function () {
         setTimeout(function(){
             $("#liveToastBtn").blur();
         },500)
         $("#liveToastBtn").blur();
-        if (!toast.hasClass("active")) {
-            toast.addClass("active");
-            if (toast.hasClass("active")) {
+        if (!toastStack.hasClass("active")) {
+            toastStack.addClass("active");
+            if (toastStack.hasClass("active")) {
                 setTimeout(function () {
                     toast.removeClass("active");
-                }, 5000)
+                }, 10000)
             }
         }
         else {
-            let clone = toast.last().clone();
-            // let content = clone.children(".toast-body").text().trim();
-            // clone.children(".toast-body").text(content + ' 1')
+            let clone = toastStack.last().clone();
+            let content = clone.children(".toast-body").text().trim();
+            clone.children(".toast-body").text(content + ' new ')
             clone.prependTo(".toast-container")
+            clone.find(".btn-close").click(function(){
+                $(this).parents(".toast").removeClass("active");
+            })
             setTimeout(function () {
                 if (clone.hasClass('active')) {
-                    clone.removeClass("active")
+                    // clone.removeClass("active")
                     clone.remove()
                 }
-            }, 5000)
+            }, 10000)
 
         }
     });
 
-    setInterval(() => {
-        document.querySelectorAll(".toast").forEach(toast => {
-            toast.querySelector(".btn-close").addEventListener('click', function () {
-                toast.classList.remove("active");
-            })
-        })    
-    }, 1);
+    // setInterval(() => {
+    //     document.querySelectorAll(".toast").forEach(toast => {
+    //         toast.querySelector(".btn-close").addEventListener('click', function () {
+    //             toast.classList.remove("active");
+    //         })
+    //     })    
+    // }, 100);
 })
