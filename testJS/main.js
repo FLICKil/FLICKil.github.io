@@ -36,7 +36,7 @@ $(document).ready(function () {
             toastStack.addClass("active");
             if (toastStack.hasClass("active")) {
                 setTimeout(function () {
-                    toast.removeClass("active");
+                    toastStack.removeClass("active");
                 }, 10000)
             }
         }
