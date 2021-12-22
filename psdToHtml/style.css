@@ -1,0 +1,119 @@
+* {
+  text-decoration: none !important;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Playfair Display";
+  font-size: 14px;
+  color: #626262 !important;
+  padding: 0 68px 0 68px;
+}
+
+img {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+.navbar {
+  text-transform: uppercase;
+  height: 164px;
+}
+
+.navbar .nav-item .nav-link {
+  padding-left: 5.5rem;
+  padding-right: 0;
+}
+.navbar-brand {
+  font-family: "Inconsolata";
+  font-size: 30px;
+  color: black !important;
+  letter-spacing: 9px;
+}
+
+.post {
+  margin: 90px 80px;
+}
+
+.tag,
+.comment {
+  font-family: "Ubuntu";
+  text-transform: uppercase;
+  color: #b4ad9e;
+}
+
+.post-title {
+  font-size: 30px;
+}
+
+.col > .post {
+  margin: 30px 80px 90px 80px;
+}
+
+.col .post-content {
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 4.5em;
+}
+
+.newsletter {
+  background-color: #f0f0f0;
+  height: 287px;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.signup {
+  font-size: 30px;
+  color: #333333;
+}
+
+.email {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+.email > p {
+  margin-right: 10rem;
+}
+
+.more {
+  text-align: center;
+  margin-bottom: 90px;
+}
+.btn {
+  border: 1px solid #626262;
+}
+
+a {
+  color: #626262 !important;
+}
+
+a:hover{
+    color: #333333 !important;
+}
+
+footer{
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    padding-left: 80px !important;
+    align-items: center;
+}
+
+footer p{
+    display: inline;
+}
+
+i{
+    color: #626262;
+}
