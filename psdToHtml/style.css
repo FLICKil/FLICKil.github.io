@@ -42,14 +42,19 @@ img {
   font-family: "Ubuntu";
   text-transform: uppercase;
   color: #b4ad9e;
+  margin-top: 1.5rem;
 }
 
 .post-title {
   font-size: 30px;
 }
 
-.col > .post {
-  margin: 30px 80px 90px 80px;
+.col > .post-left {
+  margin: 30px 0 90px 80px;
+}
+
+.col > .post-right {
+  margin: 30px 80px 90px 0;
 }
 
 .col .post-content {
@@ -57,6 +62,11 @@ img {
   word-wrap: break-word;
   overflow: hidden;
   max-height: 4.5em;
+}
+
+.post img{
+  max-width: 420px;
+  max-height: 280px;
 }
 
 .newsletter {
@@ -70,6 +80,12 @@ img {
   margin-bottom: 90px;
 }
 
+#email{
+  border:none;
+  background-color: #f0f0f0;
+  width: 20rem;
+}
+
 .signup {
   font-size: 30px;
   color: #333333;
@@ -80,10 +96,9 @@ img {
   justify-content: center;
   border-bottom: 1px solid black;
 }
-
-.email > p {
+/* .email > p {
   margin-right: 10rem;
-}
+} */
 
 .more {
   text-align: center;
