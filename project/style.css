@@ -1,0 +1,158 @@
+html {
+  font-size: 14px;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Helvetica Neue,
+    Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #f3f4f6 !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+header {
+  background-color: #2579f2;
+  color: #fff;
+}
+
+header a {
+  color: #fff;
+}
+
+.navbar{
+  padding: 1.25rem 0 !important;
+}
+
+.navbar > .container-fluid,
+.nav-list {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap !important;
+}
+
+.signin,
+.cart,
+header form {
+  padding: 0.75rem;
+}
+
+.signin a,
+.cart a {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.signin a:hover,
+.cart a:hover {
+  color: inherit !important;
+}
+
+.icon-border {
+  border-radius: 50%;
+  border: 1px #fff solid;
+  width: 3rem;
+  height: 3rem;
+}
+
+.icon {
+  text-align: center;
+}
+
+.signin .icon i {
+  top: 0;
+  left: 0;
+  transform: translateY(50%);
+  font-size: 1.5rem;
+}
+
+.signin-title,
+.cart-title {
+  margin-left: 0.5rem;
+}
+
+.cart {
+  border: 1px #fff solid;
+  border-radius: 10px;
+}
+
+.num-itm {
+  background-color: #fff;
+  color: black;
+  border-radius: 0.25rem;
+  padding: 0 0.25rem;
+  margin-left: 0.5rem;
+}
+
+.navbar .fullspan{
+  margin-top: 1.25rem;
+}
+
+.fullspan {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fullspan div {
+  display: inline-block;
+  margin-left: 0.75rem;
+}
+
+.fullspan a:hover {
+  color: inherit;
+}
+
+.fullspan a:hover div {
+  text-decoration: underline;
+}
+
+.offcanvas-header {
+  background-color: #2579f2;
+}
+
+.header-bottom {
+  background-color: #fff;
+  padding: 0.5rem 0;
+}
+
+.nav-list {
+  justify-content: flex-end;
+}
+
+.nav-list a {
+  color: #000;
+  font-weight: 600;
+}
+
+.nav-list a:hover {
+  color: #000;
+}
+
+.header-bottom img {
+  max-width: 40px;
+  margin-left: 2rem;
+}
+
+@media (min-width: 992px) {
+  .offcanvas-body {
+    display: none !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .show-lg {
+    display: none;
+  }
+  .navbar{
+    padding: 0.5rem 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .show-md {
+    display: none;
+  }
+}
