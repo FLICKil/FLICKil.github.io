@@ -8,6 +8,7 @@
     <title>GameVibe</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/1e69a2363a.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -15,6 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -38,7 +40,7 @@
                     <form class="d-flex">
                         <input class="form-control" type="search" placeholder="Tìm kiếm sản phẩm" aria-label="Search">
                         <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-                        <button type="button" class="btn">
+                        <button type="submit" class="btn">
                             <i class="fas fa-search"></i>
                         </button>
                     </form>
@@ -52,9 +54,10 @@
                             <div class="signin-title">Đăng nhập</div>
                             <div>/</div>
                         </a>
-                        <a href="#" class="signin-title" data-bs-toggle="modal" data-bs-target="#registerModal">Đăng ký</a>
+                        <a href="#" class="signin-title" data-bs-toggle="modal" data-bs-target="#registerModal">Đăng
+                            ký</a>
                     </div>
-                    <a href="#" class="cart">
+                    <a href="./cart.html" class="cart">
                         <div class="icon">
                             <i class="fas fa-shopping-cart"></i>
                         </div>
@@ -89,16 +92,17 @@
                         aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header">
                             <div class="signin nav-item">
-                                <a href="#">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
                                     <div class="icon icon-border">
                                         <i class="fas fa-user"></i>
                                     </div>
                                 </a>
-                                <a href="#">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
                                     <div class="signin-title">Đăng nhập</div>
                                     <div>/</div>
                                 </a>
-                                <a href="#" class="signin-title">Đăng ký</a>
+                                <a href="#" class="signin-title" data-bs-toggle="modal"
+                                    data-bs-target="#registerModal">Đăng ký</a>
                             </div>
                             <button type="button" class="btn-close btn-close-white text-reset"
                                 data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -128,9 +132,7 @@
                             </ul>
                         </div>
                     </div>
-
                 </div>
-
             </nav>
         </div>
 
@@ -208,6 +210,1127 @@
         </div>
     </header>
 
+    <div class="container-fluid main">
+        <div class="banner">
+            <div class="main-banner">
+                <div class="il-display">
+                    <div class="list-down d-flex">
+                        <a class="il-item" href="/search?tag=Giải%20trí">
+                            <img loading="lazy" src="./img/icon/giaitri.svg" class="" alt="Giải trí">
+                            <div class="">Giải trí</div>
+                        </a>
+                        <a class="il-item" href="/search?tag=làm+việc">
+                            <img loading="lazy" src="./img/icon/lamviec.svg" class="" alt="Làm việc">
+                            <div class="">Làm việc</div>
+                        </a>
+                        <a class="il-item" href="/search?tag=học+tập">
+                            <img loading="lazy" src="./img/icon/hoctap.svg" class="" alt="Học tập">
+                            <div class="">Học tập</div>
+                        </a>
+                        <a class="il-item" href="/search/steam">
+                            <img loading="lazy" src="./img/icon/Steam.svg" class="" alt="Game Steam">
+                            <div class="">Game Steam</div>
+                        </a>
+                        <a class="il-item" href="/search?category_id=60">
+                            <img loading="lazy" src="./img/icon/Origin.svg" class="" alt="Game Origin">
+                            <div class="">Game Origin</div>
+                        </a>
+                        <a class="il-item" href="/search?q=pubg">
+                            <img loading="lazy" src="./img/icon/PUBG.svg" class="" alt="PUBG">
+                            <div class="">PUBG</div>
+                        </a>
+                        <a class="il-item" href="">
+                            <img loading="lazy" src="./img/icon/SteamWallet.svg" class="" alt="Steam Wallet">
+                            <div class="">Steam Wallet</div>
+                        </a>
+                        <a class="il-item" href="/search/mobile-data">
+                            <img loading="lazy" src="./img/icon/Signal.svg" class="" alt="Gói Data Mobile">
+                            <div class="">Gói Data Mobile</div>
+                        </a>
+                        <a class="il-item" href="/search?q=gift+card">
+                            <img loading="lazy" src="./img/icon/GooglePlay.svg" class="" alt="Google Play, iTunes">
+                            <div class="">Google Play, iTunes</div>
+                        </a>
+                        <a class="il-item" href="/search?q=xbox">
+                            <img loading="lazy" src="./img/icon/Xbox.svg" class="" alt="Xbox Gift Card">
+                            <div class="">Xbox Gift Card</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="banner-carousel">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                                aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                                aria-label="Slide 6"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="#">
+                                    <img src="./img/banner-item/Kho game tiền triệu chỉ với 29k-33375.png"
+                                        class="d-block w-100" alt="">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#">
+                                    <img src="./img/banner-item/data siêu tốc-76618.png" class="d-block w-100" alt="">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#">
+                                    <img src="./img/banner-item/học tập phát triển-95166.png" class="d-block w-100"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#">
+                                    <img src="./img/banner-item/netflix-49596.png" class="d-block w-100" alt="">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#">
+                                    <img src="./img/banner-item/tối ưu công việc-45178.png" class="d-block w-100"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#">
+                                    <img src="./img/banner-item/ứng dụng giải trí-61206.png" class="d-block w-100"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="banner-right">
+                    <div>
+                        <div>
+                            <a href="#">
+                                <img src="./img/banner-item/Adobe1201-37163.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./img/banner-item/Spotify1201-20572.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-btm">
+                <div class="banner-items">
+                    <div>
+                        <a href="#">
+                            <img src="./img/banner-item/Steam1201-81937.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img src="./img/banner-item/Discord1201-16303.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img src="./img/banner-item/Microsoft Office 2019 Professional Plus for Windows-59242.png"
+                                alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img src="./img/banner-item/Zoom Pro 1 thang.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="seperate"></div>
+
+        <div class="item-tab d-flex">
+            <div class="menu-tab">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="best-tab" data-bs-toggle="tab" data-bs-target="#best"
+                            type="button" role="tab" aria-controls="best" aria-selected="true">Mua nhiều</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="lastest-tab" data-bs-toggle="tab" data-bs-target="#latest"
+                            type="button" role="tab" aria-controls="latest" aria-selected="false">Mới cập nhật</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="sale-tab" data-bs-toggle="tab" data-bs-target="#sale" type="button"
+                            role="tab" aria-controls="sale" aria-selected="false">Khuyến mãi</button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="best" role="tabpanel" aria-labelledby="best-tab">
+                    <div class="row p-5-only">
+                        <div class="col-lg-7 col-md-12 p-0">
+                            <div class="item">
+                                <div class="row align-items-center item-content">
+                                    <div class="col-md-4 col-sm-4 col-xs-4 p-0">
+                                        <a href="">
+                                            <div class="item-img">
+                                                <img class="check_img_errs" src="./product/5/NETFLIX1406.png" alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-8 p-0">
+                                        <div class="item-des">
+                                            <div class="row">
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="item-text cut_string">
+                                                        <a href="#">Tài khoản Netflix Premium for 1 User (1 Tháng)</a>
+                                                    </div>
+                                                    <div class="buy-now">
+                                                        <div class="d-flex flex-row flex-wrap align-items-center">
+                                                            <a href="" class="d-flex">
+                                                                <span class="border-radius-left">Mua ngay</span>
+                                                                <span class="border-radius-right">-50%</span>
+                                                            </a>
+                                                            <!-- <a href="#"><i class="fa fa-heart"></i></a> -->
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-4 col-sm-4 col-xs-4 price text-md-left text-lg-right">
+                                                    <div style="float: right">336,000đ</div>
+                                                    <br>
+                                                    <div style="float: right"><strong>168,000đ</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row align-items-center item-content">
+                                    <div class="col-md-4 col-sm-4 col-xs-4 p-0">
+                                        <a href="#">
+                                            <div class="item-img">
+                                                <img class="check_img_errs"
+                                                    src="./product/2/header.jpg"
+                                                    alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-8 p-0">
+                                        <div class="item-des">
+                                            <div class="row">
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="item-text cut_string">
+                                                        <a href="#">
+                                                            Left 4 Dead 2 </a>
+                                                    </div>
+
+                                                    <div class="buy-now">
+                                                        <div class="d-flex flex-row flex-wrap align-items-center">
+                                                            <a href="#" class="d-flex">
+                                                                <span class="border-radius-left">Mua ngay</span>
+                                                                <span class="border-radius-right">-81%</span>
+                                                            </a>
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-4 col-sm-4 col-xs-4 price text-md-left text-lg-right">
+                                                    <div style="float: right">118,000đ</div>
+                                                    <br>
+                                                    <div style="float: right"><strong>23,000đ</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row align-items-center item-content">
+                                    <div class="col-md-4 col-sm-4 col-xs-4 p-0">
+                                        <a href="#">
+                                            <div class="item-img">
+                                                <img class="check_img_errs"
+                                                    src="./product/1/header.jpg"
+                                                    alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-8 p-0">
+                                        <div class="item-des">
+                                            <div class="row">
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="item-text cut_string">
+                                                        <a href="#">
+                                                            Don't Starve Together - Mua 1 tặng 1 </a>
+                                                    </div>
+                                                    <div class="buy-now">
+                                                        <div class="d-flex flex-row flex-wrap align-items-center">
+                                                            <a href="#" class="d-flex">
+                                                                <span class="border-radius-left">Mua ngay</span>
+                                                                <span class="border-radius-right">-66%</span>
+                                                            </a>
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-4 col-sm-4 col-xs-4 price text-md-left text-lg-right">
+                                                    <div style="float: right">163,000đ</div>
+                                                    <br>
+                                                    <div style="float: right"><strong>55,000đ</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row align-items-center item-content">
+                                    <div class="col-md-4 col-sm-4 col-xs-4 p-0">
+                                        <a href="#">
+                                            <div class="item-img">
+                                                <img class="check_img_errs"
+                                                    src="./product/11/header (2).jpg"
+                                                    alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-8 p-0">
+                                        <div class="item-des">
+                                            <div class="row">
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="item-text cut_string">
+                                                        <a href="#">
+                                                            Rust </a>
+                                                    </div>
+
+                                                    <div class="buy-now">
+                                                        <div class="d-flex flex-row flex-wrap align-items-center">
+                                                            <a href="#" class="d-flex">
+                                                                <span class="border-radius-left">Mua ngay</span>
+                                                                <span class="border-radius-right">-50%</span>
+                                                            </a>
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-4 col-sm-4 col-xs-4 price text-md-left text-lg-right">
+                                                    <div style="float: right">306,000đ</div>
+                                                    <br>
+                                                    <div style="float: right"><strong>153,000đ</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row align-items-center item-content">
+                                    <div class="col-md-4 col-sm-4 col-xs-4 p-0">
+                                        <a href="#">
+                                            <div class="item-img">
+                                                <img class="check_img_errs"
+                                                    src="./product/12/header (3).jpg"
+                                                    alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-8 p-0">
+                                        <div class="item-des">
+                                            <div class="row">
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="item-text cut_string">
+                                                        <a href="#">
+                                                            The Forest </a>
+                                                    </div>
+
+                                                    <div class="buy-now">
+                                                        <div class="d-flex flex-row flex-wrap align-items-center">
+                                                            <a href="#" class="d-flex">
+                                                                <span class="border-radius-left">Mua ngay</span>
+                                                                <span class="border-radius-right">-60%</span>
+                                                            </a>
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-4 col-sm-4 col-xs-4 price text-md-left text-lg-right">
+                                                    <div style="float: right">186,000đ</div>
+                                                    <br>
+                                                    <div style="float: right"><strong>74,000đ</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item active">
+                                <div class="row align-items-center item-content">
+                                    <div class="col-md-4 col-sm-4 col-xs-4 p-0">
+                                        <a href="#">
+                                            <div class="item-img">
+                                                <img class="check_img_errs"
+                                                    src="./product/13/header (4).jpg"
+                                                    alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-8 p-0">
+                                        <div class="item-des">
+                                            <div class="row">
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="item-text cut_string">
+                                                        <a href="#">
+                                                            Dead by Daylight </a>
+                                                    </div>
+                                                    <div class="buy-now">
+                                                        <div class="d-flex flex-row flex-wrap align-items-center">
+                                                            <a href="#" class="d-flex">
+                                                                <span class="border-radius-left">Mua ngay</span>
+                                                                <span class="border-radius-right">-40%</span>
+                                                            </a>
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-4 col-sm-4 col-xs-4 price text-md-left text-lg-right">
+                                                    <div style="float: right">186,000đ</div>
+                                                    <br>
+                                                    <div style="float: right"><strong>112,000đ</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hide-product-detail col-lg-5 col-md-12 p-0 d-flex flex-column">
+                            <div class="item-detail">
+                                <div class="item-text">
+                                    <h4 class="cut_string">Dead by Daylight</h4>
+                                </div>
+                                <div class="item-tag cut_string">
+                                    <span>Action</span>
+                                </div>
+                                <div class="item-img">
+                                    <img class="check_img_errs"
+                                        src="./product/13/ss_8c5b75a9ee6c69f18eec714759e3e7b84aa906ed.600x338.jpg"
+                                        alt="">
+                                </div>
+                                <div class="item-img">
+                                    <img class="check_img_errs"
+                                        src="./product/13/ss_5d66c65ae32b7dd265c5eccf0f38ae3e21f54351.600x338.jpg"
+                                        alt="">
+                                </div>
+                                <div class="open-item">
+                                    <a href="#" style="color: #279cff">
+                                        Mở trang sản phẩm
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 text-center view-all"><span>Tìm thêm sản phẩm phù hợp</span><a
+                            href="#"
+                            class="short-btn">Xem tất cả</a></div>
+                </div>
+
+                <div class="tab-pane" id="latest" role="tabpanel" aria-labelledby="latest-tab">
+                    <div class="row p-5-only">
+                        <div class="col-lg-7 col-md-12 p-0">
+                            <div class="item">
+                                <div class="row align-items-center item-content">
+                                    <div class="col-md-4 col-sm-4 col-xs-4 p-0">
+                                        <a href="">
+                                            <div class="item-img">
+                                                <img class="check_img_errs" src="./product/5/NETFLIX1406.png" alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-8 p-0">
+                                        <div class="item-des">
+                                            <div class="row">
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="item-text cut_string">
+                                                        <a href="#">Tài khoản Netflix Premium for 1 User (1 Tháng)</a>
+                                                    </div>
+                                                    <div class="buy-now">
+                                                        <div class="d-flex flex-row flex-wrap align-items-center">
+                                                            <a href="" class="d-flex">
+                                                                <span class="border-radius-left">Mua ngay</span>
+                                                                <span class="border-radius-right">-50%</span>
+                                                            </a>
+                                                            <!-- <a href="#"><i class="fa fa-heart"></i></a> -->
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-4 col-sm-4 col-xs-4 price text-md-left text-lg-right">
+                                                    <div style="float: right">336,000đ</div>
+                                                    <br>
+                                                    <div style="float: right"><strong>168,000đ</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row align-items-center item-content">
+                                    <div class="col-md-4 col-sm-4 col-xs-4 p-0">
+                                        <a href="#">
+                                            <div class="item-img">
+                                                <img class="check_img_errs"
+                                                    src="./product/2/header.jpg"
+                                                    alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-8 p-0">
+                                        <div class="item-des">
+                                            <div class="row">
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="item-text cut_string">
+                                                        <a href="#">
+                                                            Left 4 Dead 2 </a>
+                                                    </div>
+                                                    <div class="buy-now">
+                                                        <div class="d-flex flex-row flex-wrap align-items-center">
+                                                            <a href="#" class="d-flex">
+                                                                <span class="border-radius-left">Mua ngay</span>
+                                                                <span class="border-radius-right">-81%</span>
+                                                            </a>
+
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-4 col-sm-4 col-xs-4 price text-md-left text-lg-right">
+                                                    <div style="float: right">118,000đ</div>
+                                                    <br>
+                                                    <div style="float: right"><strong>23,000đ</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row align-items-center item-content">
+                                    <div class="col-md-4 col-sm-4 col-xs-4 p-0">
+                                        <a href="#">
+                                            <div class="item-img">
+                                                <img class="check_img_errs"
+                                                    src="./product/1/header.jpg"
+                                                    alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-8 p-0">
+                                        <div class="item-des">
+                                            <div class="row">
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="item-text cut_string">
+                                                        <a href="#">
+                                                            Don't Starve Together - Mua 1 tặng 1 </a>
+                                                    </div>
+                                                    <div class="buy-now">
+                                                        <div class="d-flex flex-row flex-wrap align-items-center">
+                                                            <a href="#" class="d-flex">
+                                                                <span class="border-radius-left">Mua ngay</span>
+                                                                <span class="border-radius-right">-66%</span>
+                                                            </a>
+
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-4 col-sm-4 col-xs-4 price text-md-left text-lg-right">
+                                                    <div style="float: right">163,000đ</div>
+                                                    <br>
+                                                    <div style="float: right"><strong>55,000đ</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row align-items-center item-content">
+                                    <div class="col-md-4 col-sm-4 col-xs-4 p-0">
+                                        <a href="#">
+                                            <div class="item-img">
+                                                <img class="check_img_errs"
+                                                    src="./product/11/header (2).jpg"
+                                                    alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-8 p-0">
+                                        <div class="item-des">
+                                            <div class="row">
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="item-text cut_string">
+                                                        <a href="#">
+                                                            Rust </a>
+                                                    </div>
+                                                    <div class="buy-now">
+                                                        <div class="d-flex flex-row flex-wrap align-items-center">
+                                                            <a href="#" class="d-flex">
+                                                                <span class="border-radius-left">Mua ngay</span>
+                                                                <span class="border-radius-right">-50%</span>
+                                                            </a>
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-4 col-sm-4 col-xs-4 price text-md-left text-lg-right">
+                                                    <div style="float: right">306,000đ</div>
+                                                    <br>
+                                                    <div style="float: right"><strong>153,000đ</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row align-items-center item-content">
+                                    <div class="col-md-4 col-sm-4 col-xs-4 p-0">
+                                        <a href="the-forest">
+                                            <div class="item-img">
+                                                <img class="check_img_errs"
+                                                    src="./product/12/header (3).jpg"
+                                                    alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-8 p-0">
+                                        <div class="item-des">
+                                            <div class="row">
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="item-text cut_string">
+                                                        <a href="the-forest">
+                                                            The Forest </a>
+                                                    </div>
+                                                    <div class="buy-now">
+                                                        <div class="d-flex flex-row flex-wrap align-items-center">
+                                                            <a href="#" class="d-flex">
+                                                                <span class="border-radius-left">Mua ngay</span>
+                                                                <span class="border-radius-right">-60%</span>
+                                                            </a>
+
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-4 col-sm-4 col-xs-4 price text-md-left text-lg-right">
+                                                    <div style="float: right">186,000đ</div>
+                                                    <br>
+                                                    <div style="float: right"><strong>74,000đ</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item active">
+                                <div class="row align-items-center item-content">
+                                    <div class="col-md-4 col-sm-4 col-xs-4 p-0">
+                                        <a href="#">
+                                            <div class="item-img">
+                                                <img class="check_img_errs"
+                                                    src="https://web.archive.org/web/20210703194236im_/https://steamcdn-a.akamaihd.net/steam/apps/381210/header.jpg"
+                                                    alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-8 p-0">
+                                        <div class="item-des">
+                                            <div class="row">
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="item-text cut_string">
+                                                        <a href="#">
+                                                            Dead by Daylight </a>
+                                                    </div>
+                                                    <div class="buy-now">
+                                                        <div class="d-flex flex-row flex-wrap align-items-center">
+                                                            <a href="#" class="d-flex">
+                                                                <span class="border-radius-left">Mua ngay</span>
+                                                                <span class="border-radius-right">-40%</span>
+                                                            </a>
+
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-4 col-sm-4 col-xs-4 price text-md-left text-lg-right">
+                                                    <div style="float: right">186,000đ</div>
+                                                    <br>
+                                                    <div style="float: right"><strong>112,000đ</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hide-product-detail col-lg-5 col-md-12 p-0 d-flex flex-column">
+                            <div class="item-detail">
+                                <div class="item-text">
+                                    <h4 class="cut_string">Dead by Daylight</h4>
+                                </div>
+                                <div class="item-tag cut_string">
+                                    <span>Action</span>
+                                </div>
+                                <div class="item-img">
+                                    <img class="check_img_errs"
+                                        src="./product/13/ss_8c5b75a9ee6c69f18eec714759e3e7b84aa906ed.600x338.jpg"
+                                        alt="">
+                                </div>
+                                <div class="item-img">
+                                    <img class="check_img_errs"
+                                        src="./product/13/ss_5d66c65ae32b7dd265c5eccf0f38ae3e21f54351.600x338.jpg"
+                                        alt="">
+                                </div>
+                                <div class="open-item">
+                                    <a href="#" style="color: #279cff">
+                                        Mở trang sản phẩm
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 text-center view-all"><span>Tìm thêm sản phẩm phù hợp</span><a
+                            href="#"
+                            class="short-btn">Xem tất cả</a></div>
+                </div>
+
+                <div class="tab-pane" id="sale" role="tabpanel" aria-labelledby="sale-tab">
+                    <div class="row p-5-only">
+                        <div class="col-lg-7 col-md-12 p-0">
+                            <div class="item">
+                                <div class="row align-items-center item-content">
+                                    <div class="col-md-4 col-sm-4 col-xs-4 p-0">
+                                        <a href="">
+                                            <div class="item-img">
+                                                <img class="check_img_errs" src="./product/5/NETFLIX1406.png" alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-8 p-0">
+                                        <div class="item-des">
+                                            <div class="row">
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="item-text cut_string">
+                                                        <a href="#">Tài khoản Netflix Premium for 1 User (1 Tháng)</a>
+                                                    </div>
+                                                    <div class="buy-now">
+                                                        <div class="d-flex flex-row flex-wrap align-items-center">
+                                                            <a href="" class="d-flex">
+                                                                <span class="border-radius-left">Mua ngay</span>
+                                                                <span class="border-radius-right">-50%</span>
+                                                            </a>
+                                                            <!-- <a href="#"><i class="fa fa-heart"></i></a> -->
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-4 col-sm-4 col-xs-4 price text-md-left text-lg-right">
+                                                    <div style="float: right">336,000đ</div>
+                                                    <br>
+                                                    <div style="float: right"><strong>168,000đ</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row align-items-center item-content">
+                                    <div class="col-md-4 col-sm-4 col-xs-4 p-0">
+                                        <a href="#">
+                                            <div class="item-img">
+                                                <img class="check_img_errs"
+                                                    src="./product/2/header.jpg"
+                                                    alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-8 p-0">
+                                        <div class="item-des">
+                                            <div class="row">
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="item-text cut_string">
+                                                        <a href="#">
+                                                            Left 4 Dead 2 </a>
+                                                    </div>
+                                                    <div class="buy-now">
+                                                        <div class="d-flex flex-row flex-wrap align-items-center">
+                                                            <a href="#" class="d-flex">
+                                                                <span class="border-radius-left">Mua ngay</span>
+                                                                <span class="border-radius-right">-81%</span>
+                                                            </a>
+
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-4 col-sm-4 col-xs-4 price text-md-left text-lg-right">
+                                                    <div style="float: right">118,000đ</div>
+                                                    <br>
+                                                    <div style="float: right"><strong>23,000đ</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row align-items-center item-content">
+                                    <div class="col-md-4 col-sm-4 col-xs-4 p-0">
+                                        <a href="#">
+                                            <div class="item-img">
+                                                <img class="check_img_errs"
+                                                    src="./product/1/header.jpg"
+                                                    alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-8 p-0">
+                                        <div class="item-des">
+                                            <div class="row">
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="item-text cut_string">
+                                                        <a href="#">
+                                                            Don't Starve Together - Mua 1 tặng 1 </a>
+                                                    </div>
+                                                    <div class="buy-now">
+                                                        <div class="d-flex flex-row flex-wrap align-items-center">
+                                                            <a href="#" class="d-flex">
+                                                                <span class="border-radius-left">Mua ngay</span>
+                                                                <span class="border-radius-right">-66%</span>
+                                                            </a>
+
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-4 col-sm-4 col-xs-4 price text-md-left text-lg-right">
+                                                    <div style="float: right">163,000đ</div>
+                                                    <br>
+                                                    <div style="float: right"><strong>55,000đ</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row align-items-center item-content">
+                                    <div class="col-md-4 col-sm-4 col-xs-4 p-0">
+                                        <a href="#">
+                                            <div class="item-img">
+                                                <img class="check_img_errs"
+                                                    src="./product/11/header (2).jpg"
+                                                    alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-8 p-0">
+                                        <div class="item-des">
+                                            <div class="row">
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="item-text cut_string">
+                                                        <a href="#">
+                                                            Rust </a>
+                                                    </div>
+                                                    <div class="buy-now">
+                                                        <div class="d-flex flex-row flex-wrap align-items-center">
+                                                            <a href="#" class="d-flex">
+                                                                <span class="border-radius-left">Mua ngay</span>
+                                                                <span class="border-radius-right">-50%</span>
+                                                            </a>
+
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-4 col-sm-4 col-xs-4 price text-md-left text-lg-right">
+                                                    <div style="float: right">306,000đ</div>
+                                                    <br>
+                                                    <div style="float: right"><strong>153,000đ</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row align-items-center item-content">
+                                    <div class="col-md-4 col-sm-4 col-xs-4 p-0">
+                                        <a href="the-forest">
+                                            <div class="item-img">
+                                                <img class="check_img_errs"
+                                                    src="./product/12/header (3).jpg"
+                                                    alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-8 p-0">
+                                        <div class="item-des">
+                                            <div class="row">
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="item-text cut_string">
+                                                        <a href="the-forest">
+                                                            The Forest </a>
+                                                    </div>
+                                                    <div class="buy-now">
+                                                        <div class="d-flex flex-row flex-wrap align-items-center">
+                                                            <a href="#" class="d-flex">
+                                                                <span class="border-radius-left">Mua ngay</span>
+                                                                <span class="border-radius-right">-60%</span>
+                                                            </a>
+
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-4 col-sm-4 col-xs-4 price text-md-left text-lg-right">
+                                                    <div style="float: right">186,000đ</div>
+                                                    <br>
+                                                    <div style="float: right"><strong>74,000đ</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item active">
+                                <div class="row align-items-center item-content">
+                                    <div class="col-md-4 col-sm-4 col-xs-4 p-0">
+                                        <a href="#">
+                                            <div class="item-img">
+                                                <img class="check_img_errs"
+                                                    src="https://web.archive.org/web/20210703194236im_/https://steamcdn-a.akamaihd.net/steam/apps/381210/header.jpg"
+                                                    alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-8 p-0">
+                                        <div class="item-des">
+                                            <div class="row">
+                                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                                    <div class="item-text cut_string">
+                                                        <a href="#">
+                                                            Dead by Daylight </a>
+                                                    </div>
+                                                    <div class="buy-now">
+                                                        <div class="d-flex flex-row flex-wrap align-items-center">
+                                                            <a href="#" class="d-flex">
+                                                                <span class="border-radius-left">Mua ngay</span>
+                                                                <span class="border-radius-right">-40%</span>
+                                                            </a>
+
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-4 col-sm-4 col-xs-4 price text-md-left text-lg-right">
+                                                    <div style="float: right">186,000đ</div>
+                                                    <br>
+                                                    <div style="float: right"><strong>112,000đ</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hide-product-detail col-lg-5 col-md-12 p-0 d-flex flex-column">
+                            <div class="item-detail">
+                                <div class="item-text">
+                                    <h4 class="cut_string">Dead by Daylight</h4>
+                                </div>
+                                <div class="item-tag cut_string">
+                                    <span>Action</span>
+                                </div>
+                                <div class="item-img">
+                                    <img class="check_img_errs"
+                                        src="./product/13/ss_8c5b75a9ee6c69f18eec714759e3e7b84aa906ed.600x338.jpg"
+                                        alt="">
+                                </div>
+                                <div class="item-img">
+                                    <img class="check_img_errs"
+                                        src="./product/13/ss_5d66c65ae32b7dd265c5eccf0f38ae3e21f54351.600x338.jpg"
+                                        alt="">
+                                </div>
+                                <div class="open-item">
+                                    <a href="#" style="color: #279cff">
+                                        Mở trang sản phẩm
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 text-center view-all"><span>Tìm thêm sản phẩm phù hợp</span><a
+                            href="#"
+                            class="short-btn">Xem tất cả</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="byPrice">
+            <div>
+                <h4>Sản phẩm giá tốt</h4>
+                <div>Bạn có thể lựa chọn sản phẩm phù hợp với túi tiền</div>
+            </div>
+            <div class="row product-price-well">
+                <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                    <div class="well-price">
+                        <strong>Dưới 50.000đ</strong>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                    <div class="well-price">
+                        <strong>Dưới 100.000đ</strong>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                    <div class="well-price">
+                        <strong>Dưới 200.000đ</strong>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                    <div class="well-price">
+                        <strong>Dưới 500.000đ</strong>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12" style="padding-left: 15px;padding-right: 15px">
+                    <div class="well-price">
+                        <strong>Dưới 1.000.000đ</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="seperate"></div>
+
+        <div class="explore">
+            <h4>Khám phá</h4>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <a href="#">
+                        <div class="item-bottom-wrapper">
+                            <img src="./img/banner-item/san-pham-noi-bat (1).png" alt="">
+                            <div class="card-info">
+                                <div class="card-title">Sản phẩm nổi bật</div>
+                                <div class="card-desc">Game hot trên thị trường, được mọi người mua nhiều</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <a href="#">
+                        <div class="item-bottom-wrapper">
+                            <img src="./img/banner-item/khuyen-mai.png" alt="">
+                            <div class="card-info">
+                                <div class="card-title">Khuyến mãi</div>
+                                <div class="card-desc">Cơ hội mua game khủng với giá cực tốt, chờ gì nữa vào thôi
+                                    nào!
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <a href="#">
+                        <div class="item-bottom-wrapper">
+                            <img src="./img/banner-item/code_wallet.png" alt="">
+                            <div class="card-info">
+                                <div class="card-title">Code Wallet</div>
+                                <div class="card-desc">Nạp tiền vào ví mua sản phẩm dễ dàng hơn bao giờ hết</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <a href="#">
+                        <div class="item-bottom-wrapper">
+                            <img src="./img/banner-item/Banner-goi-nap.png" alt="">
+                            <div class="card-info">
+                                <div class="card-title">Thẻ cào</div>
+                                <div class="card-desc">Thẻ cào điện thoại các nhà mạng</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="newsletter">
+            <div>
+                <div class="news-img">
+                    <img src="./img/icon/newsletter.svg" alt="">
+                </div>
+                <div class="news-desc">
+                    <h3>Bạn chưa có tài khoản</h3>
+                    <div>Hãy tạo ngay một tài khoản để sử dụng đầy đủ các tính năng, tích lũy ưu đãi khi thanh toán
+                        các
+                        sản phẩm và tham gia vào chương trình Giới thiệu bạn bè nhận hoa hồng vĩnh viễn tại
+                        GameVibe.
+                    </div>
+                    <div class="news-sub">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#registerModal">Đăng ký
+                            ngay</button>
+                        <div>Hoặc bạn đã có tài khoản? <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#loginModal">Đăng
+                                nhập</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
     <footer>
         <div class="footer-top" style="margin-top:20px;">
             <div class="container mt-0">
@@ -229,7 +1352,8 @@
                         <div style="margin-left: 20px;">
                             <span style="font-size:13px;font-weight:bold;text-transform:uppercase;">BẢO HÀNH NHANH
                                 CHÓNG</span>
-                            <p style="font-size:13px;">Mọi yêu cầu hỗ trợ sẽ được đội ngũ tư vấn giải quyết trực tiếp.
+                            <p style="font-size:13px;">Mọi yêu cầu hỗ trợ sẽ được đội ngũ tư vấn giải quyết trực
+                                tiếp.
                             </p>
                         </div>
                     </div>
@@ -238,7 +1362,8 @@
                             <img src="./img/icon/service3.png" style="max-width:50px;" alt="UY TÍN 5 SAO">
                         </div>
                         <div style="margin-left: 20px;">
-                            <span style="font-size:13px;font-weight:bold;text-transform:uppercase;">UY TÍN 5 SAO</span>
+                            <span style="font-size:13px;font-weight:bold;text-transform:uppercase;">UY TÍN 5
+                                SAO</span>
                             <p style="font-size:13px;">Được cộng đồng bình chọn là shop game uy tín nhất VN</p>
                         </div>
                     </div>
@@ -318,7 +1443,8 @@
                                                 data-bs-target="#registerModal">Đăng ký</button>
                                         </div>
                                     </h3>
-                                    <div class="">Đăng nhập để theo dõi đơn hàng, lưu danh sách sản phẩm yêu thích và
+                                    <div class="">Đăng nhập để theo dõi đơn hàng, lưu danh sách sản phẩm yêu thích
+                                        và
                                         nhận nhiều ưu đãi hấp dẫn</div>
                                     <div>
                                         <div class="input">
@@ -365,7 +1491,8 @@
                                             <button type="button" class="active">Đăng ký</button>
                                         </div>
                                     </h3>
-                                    <div class="">Đăng ký để theo dõi đơn hàng, lưu danh sách sản phẩm yêu thích và nhận
+                                    <div class="">Đăng ký để theo dõi đơn hàng, lưu danh sách sản phẩm yêu thích và
+                                        nhận
                                         nhiều ưu đãi hấp dẫn</div>
                                     <div>
                                         <div class="input">
@@ -414,7 +1541,8 @@
                                             Đặt lại mật khẩu
                                         </div>
                                     </h3>
-                                    <div class="">Bạn vui lòng hoàn tất các thông tin xác thực bên dưới để chúng tôi đặt
+                                    <div class="">Bạn vui lòng hoàn tất các thông tin xác thực bên dưới để chúng tôi
+                                        đặt
                                         lại mật khẩu cho tài khoản của bạn</div>
                                     <div>
                                         <div class="input">
@@ -435,7 +1563,8 @@
                                         </div>
                                     </div>
                                     <button type="submit">Đặt lại mật khẩu</button>
-                                    <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa-light fa-chevron-left"></i> Quay lại trang đăng
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i
+                                            class="fa-light fa-chevron-left"></i> Quay lại trang đăng
                                         nhập</a>
                                 </div>
                                 <div class="modal-img">
@@ -450,7 +1579,7 @@
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <script src="main.js"></script>
 
 </body>
