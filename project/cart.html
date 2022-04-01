@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVibe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1e69a2363a.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="header top">
+            <div class="header-top left">
+
+            </div>
+            <div class="header-top right">
+
+            </div>
+        </div>
+        <div class="header">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand show-lg" title="Trang chủ" href="./index.html">GameVibe</a>
+                    <form class="d-flex">
+                        <input class="form-control" type="search" placeholder="Tìm kiếm sản phẩm" aria-label="Search">
+                        <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+                        <button type="submit" class="btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                    <div class="signin show-md">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <div class="icon icon-border">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <div class="signin-title">Đăng nhập</div>
+                            <div>/</div>
+                        </a>
+                        <a href="#" class="signin-title" data-bs-toggle="modal" data-bs-target="#registerModal">Đăng
+                            ký</a>
+                    </div>
+                    <a href="./cart.html" class="cart">
+                        <div class="icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="cart-title show-md">Giỏ hàng</div>
+                        <div class="num-itm">0</div>
+                    </a>
+
+                    <div class="fullspan show-lg">
+                        <a href="#">
+                            <i class="fas fa-eye"></i>
+                            <div>Sản phẩm bạn vừa xem</div>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-fire"></i>
+                            <div>Sản phẩm mua nhiều</div>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-percent"></i>
+                            <div>Sản phẩm khuyến mãi</div>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <div>Đại lý giao dịch</div>
+                        </a>
+                        <a href="./topup.html">
+                            <i class="fas fa-credit-card"></i>
+                            <div>Hình thức thanh toán</div>
+                        </a>
+                    </div>
+
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <div class="signin nav-item">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                    <div class="icon icon-border">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                </a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                    <div class="signin-title">Đăng nhập</div>
+                                    <div>/</div>
+                                </a>
+                                <a href="#" class="signin-title" data-bs-toggle="modal"
+                                    data-bs-target="#registerModal">Đăng ký</a>
+                            </div>
+                            <button type="button" class="btn-close btn-close-white text-reset"
+                                data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dropdown
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </nav>
+        </div>
+
+        <div class="header-bottom show-lg">
+            <div class="container-fluid fullspan d-flex">
+                <div class="hb-left">
+                    <div class="item-list">
+                        <i class="fas fa-bars"></i>
+                        <div class="il-title">Danh mục sản phẩm</div>
+                    </div>
+                    <div class="il-dropdown">
+                        <div class="list-down d-flex">
+                            <a class="il-item" href="/search?tag=Giải%20trí">
+                                <img loading="lazy" src="./img/icon/giaitri.svg" class="" alt="Giải trí">
+                                <div class="">Giải trí</div>
+                            </a>
+                            <a class="il-item" href="/search?tag=làm+việc">
+                                <img loading="lazy" src="./img/icon/lamviec.svg" class="" alt="Làm việc">
+                                <div class="">Làm việc</div>
+                            </a>
+                            <a class="il-item" href="/search?tag=học+tập">
+                                <img loading="lazy" src="./img/icon/hoctap.svg" class="" alt="Học tập">
+                                <div class="">Học tập</div>
+                            </a>
+                            <a class="il-item" href="/search/steam">
+                                <img loading="lazy" src="./img/icon/Steam.svg" class="" alt="Game Steam">
+                                <div class="">Game Steam</div>
+                            </a>
+                            <a class="il-item" href="/search?category_id=60">
+                                <img loading="lazy" src="./img/icon/Origin.svg" class="" alt="Game Origin">
+                                <div class="">Game Origin</div>
+                            </a>
+                            <a class="il-item" href="/search?q=pubg">
+                                <img loading="lazy" src="./img/icon/PUBG.svg" class="" alt="PUBG">
+                                <div class="">PUBG</div>
+                            </a>
+                            <a class="il-item" href="">
+                                <img loading="lazy" src="./img/icon/SteamWallet.svg" class="" alt="Steam Wallet">
+                                <div class="">Steam Wallet</div>
+                            </a>
+                            <a class="il-item" href="/search/mobile-data">
+                                <img loading="lazy" src="./img/icon/Signal.svg" class="" alt="Gói Data Mobile">
+                                <div class="">Gói Data Mobile</div>
+                            </a>
+                            <a class="il-item" href="/search?q=gift+card">
+                                <img loading="lazy" src="./img/icon/GooglePlay.svg" class="" alt="Google Play, iTunes">
+                                <div class="">Google Play, iTunes</div>
+                            </a>
+                            <a class="il-item" href="/search?q=xbox">
+                                <img loading="lazy" src="./img/icon/Xbox.svg" class="" alt="Xbox Gift Card">
+                                <div class="">Xbox Gift Card</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hb-right d-flex nav-list">
+                    <a href="#">
+                        <img src="./img/icon/smartphone.png" alt="">
+                        <div>Nạp thẻ tiện ích</div>
+                    </a>
+                    <a href="#">
+                        <img src="./img/icon/gift.png" alt="">
+                        <div>Giới thiệu bạn bè</div>
+                    </a>
+                    <a href="#">
+                        <img src="./img/icon/handshake.png" alt="">
+                        <div>Liên hệ hợp tác</div>
+                    </a>
+                    <a href="#">
+                        <img src="./img/icon/diamond.png" alt="">
+                        <div>Ưu đãi khách hàng Vip</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid main">
+        <div class="cart-list">
+            <div class="cart-progress">
+                <div class="progress-step active">
+                    <div class="circle active"></div>
+                    <div>Giỏ hàng</div>
+                </div>
+                <div class="progress-status"> </div>
+                <div class="progress-step">
+                    <div class="circle"></div>
+                    <div>Xác nhận</div>
+                </div>
+                <div class="progress-status"> </div>
+                <div class="progress-step">
+                    <div class="circle"></div>
+                    <div>Thanh toán</div>
+                </div>
+            </div>
+
+            <div class="cart-main">
+                <div class="cart-body">
+                    <div class="cart-item-list">
+
+                    </div>
+                    <div class="cart-payment">
+                        <div class="gift-disc">
+                            <div class="gift-disc-label">
+                                <h6>Bạn có mã ưu đãi?</h6>
+                            </div>
+                            <form action="/api/checkout/coupon">
+                                <fieldset>
+                                    <div>
+                                        <div class="">
+                                            <div class="">
+                                                <div class="">
+                                                    <input class="gift-disc-input" name="code" required="" placeholder="Mã giảm giá">
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="gift-disc-btn">Áp dụng</button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="gift-disc">
+                            <div class="gift-disc-label">
+                                <h6>Bạn có mã ưu đãi?</h6>
+                            </div>
+                            <form action="/api/checkout/coupon">
+                                <fieldset>
+                                    <div>
+                                        <div class="">
+                                            <div class="">
+                                                <div class="">
+                                                    <input class="" name="code" required="" placeholder="Mã giảm giá">
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="">Áp dụng</button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-top" style="margin-top:20px;">
+            <div class="container mt-0">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 flex-row">
+                        <div class="img">
+                            <img src="./img/icon/service1.png" style="max-width:50px;" alt="GIAO HÀNG SIÊU TỐC">
+                        </div>
+                        <div style="margin-left: 20px;">
+                            <span style="font-size:13px;font-weight:bold;text-transform:uppercase;">GIAO HÀNG SIÊU
+                                TỐC</span>
+                            <p style="font-size:13px;">Hệ thống giao hàng tự động chỉ trong 3 phút</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 flex-row">
+                        <div class="img">
+                            <img src="./img/icon/service2.png" style="max-width:50px;" alt="BẢO HÀNH NHANH CHÓNG">
+                        </div>
+                        <div style="margin-left: 20px;">
+                            <span style="font-size:13px;font-weight:bold;text-transform:uppercase;">BẢO HÀNH NHANH
+                                CHÓNG</span>
+                            <p style="font-size:13px;">Mọi yêu cầu hỗ trợ sẽ được đội ngũ tư vấn giải quyết trực
+                                tiếp.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 flex-row">
+                        <div class="img">
+                            <img src="./img/icon/service3.png" style="max-width:50px;" alt="UY TÍN 5 SAO">
+                        </div>
+                        <div style="margin-left: 20px;">
+                            <span style="font-size:13px;font-weight:bold;text-transform:uppercase;">UY TÍN 5
+                                SAO</span>
+                            <p style="font-size:13px;">Được cộng đồng bình chọn là shop game uy tín nhất VN</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 flex-row">
+                        <div class="img">
+                            <img src="./img/icon/service4.png" style="max-width:50px;" alt="HỖ TRỢ TẬN TÌNH">
+                        </div>
+                        <div style="margin-left: 20px;">
+                            <span style="font-size:13px;font-weight:bold;text-transform:uppercase;">HỖ TRỢ TẬN
+                                TÌNH</span>
+                            <p style="font-size:13px;">Hệ thống hỗ trợ online liên tục từ 8h - 24h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-social">
+                <img loading="lazy" src="./img/icon/fb.svg" class="" alt="Facebook" title="Facebook">
+                <img loading="lazy" src="./img/icon/youtube.svg" class="" alt="Youtube" title="Youtube">
+                <img loading="lazy" src="./img/icon/insta.svg" class="" alt="Instagram" title="Instagram">
+            </div>
+            <div class="seperate"></div>
+            <div class="footer-info">
+                <div class="d-flex flex-wrap">
+                    <div class="d-flex footer-detail f-about">
+                        <div class="f-title">Giới thiệu</div>
+                        <div class="d-flex footer-link">
+                            <a href="#" target="_blank" rel="noreferrer">Game bản quyền là gì?</a>
+                            <a href="#" target="_blank" rel="noreferrer">Giới thiệu Game Vibe</a>
+                            <a href="#" target="_blank" rel="noreferrer">Điều khoản dịch vụ</a>
+                            <a href="#" target="_blank" rel="noreferrer">Chính sách bảo mật</a>
+                        </div>
+                    </div>
+                    <div class="d-flex footer-detail f-account">
+                        <div class="f-title">Tài khoản</div>
+                        <div class="d-flex footer-link">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Đăng nhập</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Đăng ký</a>
+                        </div>
+                    </div>
+                    <div class="d-flex footer-detail f-contact">
+                        <div class="f-title">Liên hệ</div>
+                        <div class="d-flex footer-link">
+                            <div>
+                                <div class="notice">Hotline chăm sóc khách hàng:
+                                    <a href="tel:0989204518" class="highlight">0989204518</a>
+                                </div>
+                                <div class="note">(Các ngày trong tuần từ 8h đến 24h)
+                                </div>
+                            </div>
+                            <div>Email liên hệ: <a href="mailto:vinhdq67@gmail.com"
+                                    class="highlight">vinhdq67@gmail.com</a>
+                            </div>
+                            <a href="#" target="_blank" rel="noreferrer">Địa chỉ giao dịch trực tiếp</a>
+                            <a href="#" target="_blank" rel="noreferrer">Facebook</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="d-flex flex-wrap">
+                    <form action="">
+                        <fieldset>
+                            <div class="d-flex modal-area">
+                                <div class="d-flex flex-wrap modal-body">
+                                    <h3>
+                                        <div class="modal-name">
+                                            <button type="button" class="active">Đăng nhập</button>
+                                            <button type="button" class="" data-bs-toggle="modal"
+                                                data-bs-target="#registerModal">Đăng ký</button>
+                                        </div>
+                                    </h3>
+                                    <div class="">Đăng nhập để theo dõi đơn hàng, lưu danh sách sản phẩm yêu thích
+                                        và
+                                        nhận nhiều ưu đãi hấp dẫn</div>
+                                    <div>
+                                        <div class="input">
+                                            <input type="text" name="email" id="logemail" class="idf">
+                                            <label for="email" class="ldf">Email hoặc tên đăng nhập</label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="input">
+                                            <input type="password" name="password" id="logpassword" class="idf">
+                                            <label for="password" class="ldf">Mật khẩu</label>
+                                        </div>
+                                    </div>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#forgotModal">Bạn quên mật
+                                        khẩu?</a>
+                                    <button type="submit">Đăng nhập</button>
+                                </div>
+                                <div class="modal-img">
+                                    <img loading="lazy" src="./img/icon/register.svg" alt="Đăng nhập / Đăng ký">
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </form>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="d-flex flex-wrap">
+                    <form action="">
+                        <fieldset>
+                            <div class="d-flex modal-area">
+                                <div class="d-flex flex-wrap modal-body">
+                                    <h3>
+                                        <div class="modal-name">
+                                            <button type="button" class="" data-bs-toggle="modal"
+                                                data-bs-target="#loginModal">Đăng nhập</button>
+                                            <button type="button" class="active">Đăng ký</button>
+                                        </div>
+                                    </h3>
+                                    <div class="">Đăng ký để theo dõi đơn hàng, lưu danh sách sản phẩm yêu thích và
+                                        nhận
+                                        nhiều ưu đãi hấp dẫn</div>
+                                    <div>
+                                        <div class="input">
+                                            <input type="text" name="email" id="regemail" class="idf">
+                                            <label for="email" class="ldf">Email</label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="input">
+                                            <input type="text" name="sername" id="sername" class="idf">
+                                            <label for="sername" class="ldf">Tên đăng nhập</label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="input">
+                                            <input type="password" name="password" id="regpassword" class="idf">
+                                            <label for="password" class="ldf">Mật khẩu</label>
+                                        </div>
+                                    </div>
+                                    <button type="submit">Tạo tài khoản</button>
+                                </div>
+                                <div class="modal-img">
+                                    <img loading="lazy" src="./img/icon/login.svg" alt="Đăng nhập / Đăng ký">
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </form>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="forgotModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="forgotModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="d-flex flex-wrap">
+                    <form action="">
+                        <fieldset>
+                            <div class="d-flex modal-area">
+                                <div class="d-flex flex-wrap modal-body">
+                                    <h3>
+                                        <div class="modal-name active">
+                                            Đặt lại mật khẩu
+                                        </div>
+                                    </h3>
+                                    <div class="">Bạn vui lòng hoàn tất các thông tin xác thực bên dưới để chúng tôi
+                                        đặt
+                                        lại mật khẩu cho tài khoản của bạn</div>
+                                    <div>
+                                        <div class="input">
+                                            <input type="text" name="email" id="loginInfo" class="idf">
+                                            <label for="email" class="ldf">Email</label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="input">
+                                            <input type="password" name="password" id="newPassword" class="idf">
+                                            <label for="password" class="ldf">Mật khẩu</label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="input">
+                                            <input type="password" name="password" id="confirmPassword" class="idf">
+                                            <label for="password" class="ldf">Nhập lại mật khẩu mới</label>
+                                        </div>
+                                    </div>
+                                    <button type="submit">Đặt lại mật khẩu</button>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i
+                                            class="fa-light fa-chevron-left"></i> Quay lại trang đăng
+                                        nhập</a>
+                                </div>
+                                <div class="modal-img">
+                                    <img loading="lazy" src="./img/icon/forgot.svg" alt="Quên mật khẩu">
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </form>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="topup.js"></script>
+
+</body>
+
+</html>

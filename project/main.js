@@ -66,3 +66,44 @@ function inputBlur() {
 }
 
 inputBlur();
+
+function updateCart(act, el, num) {
+    if (act == 0) {
+        if (cart.length == 0) {
+            cart.push(`${el},${num}`)
+            console.log(1)
+        }
+        else {
+            cart.forEach(element => {
+                let product_id = element.split(',')[0];
+                let num_itm = element.split(',')[1];
+
+                if (el == product_id) {
+                    num_itm = num_itm - num;
+                    for (let i = 0; i < cart.length; i++){
+                        if (cart[i] == element){
+                            cart.splice(i,1);
+                            cart.push(`${el},${num_itm}`)
+                        }
+                    }
+                    console.log(2)
+                }
+                else {
+                    cart.push(`${el},${num}`);
+                    console.log(3);
+                }
+            });
+        }
+    }
+}
+
+function updateCartDisplay(){
+    let num_pro = $(".cart .num-itm").html;
+
+    cart.forEach(element => {
+        num = element.split(',')[1]
+        num_pro += num;
+    })
+
+    $(".cart .num-itm").html(num_pro);
+}
